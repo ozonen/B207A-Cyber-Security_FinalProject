@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <div class="auth-wrap">
+        <form method="post" class="card auth-card">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <h1>Welcome back</h1>
+            <p class="subtitle">Log in to access your vault</p>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required autofocus>
+
+            <label for="password">Master password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="primary-btn">Login</button>
+            <p class="auth-switch">No account yet? <a href="{{ url_for('register') }}">Register</a></p>
+        </form>
+    </div>
+{% endblock %}

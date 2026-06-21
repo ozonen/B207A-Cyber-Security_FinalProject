@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+    <div class="page-header">
+        <h1>Your vault</h1>
+        <a href="{{ url_for('add') }}" class="primary-btn">+ Add entry</a>
+    </div>
+
+    {% if entries %}
+        <div class="card table-card">
+            <table class="vault-table">
+                <thead>
+                    <tr>
+                        <th>Site</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in entries %}
+                        <tr>
+                            <td>{{ entry.site_name }}</td>
+                            <td>{{ entry.site_username }}</td>
+                            <td class="password-cell">
+                                <span class="password-value" data-password="{{ entry.password }}">••••••••</span>
+                                <button type="button" class="icon-btn reveal-btn">Show</button>
+                                <button type="button" class="icon-btn copy-btn">Copy</button>
+                            </td>
+                            <td>
+                                <form method="post" action="{{ url_for('delete', entry_id=entry.id) }}">
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                    <button type="submit" class="danger-btn">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div class="card empty-state">
+            <p>No saved entries yet.</p>
+            <a href="{{ url_for('add') }}" class="primary-btn">Add your first entry</a>
+        </div>
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

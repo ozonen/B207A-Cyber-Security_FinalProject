@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Add Entry{% endblock %}
+{% block content %}
+    <div class="auth-wrap">
+        <form method="post" class="card auth-card">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <h1>Add a new entry</h1>
+
+            <label for="site_name">Site name</label>
+            <input type="text" id="site_name" name="site_name" required autofocus>
+
+            <label for="site_username">Site username / email</label>
+            <input type="text" id="site_username" name="site_username" required>
+
+            <label for="site_password">Password</label>
+            <div class="password-row">
+                <input type="text" id="site_password" name="site_password" class="monospace" required>
+                <button type="button" id="generate-btn" class="secondary-btn">Generate</button>
+            </div>
+
+            <button type="submit" class="primary-btn">Save entry</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
