@@ -5,10 +5,10 @@ provides registration, login, password generation, and credential management
 through a Flask web interface.
 
 
-| **Course**       | B207A Cyber Security      |
-| -------------    | -------------  | -------- |
-| **Name**         | Ozgur Onen                | 
-| **Student ID**   | GH1044899                 |
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 
 ## Project Structure
 
