@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0f172a;
+    --bg-light: #eef2f7;
+    --accent: #0ea5e9;
+    --accent-dark: #0284c7;
+    --card-bg: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --danger: #dc2626;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+    background: var(--bg-light);
+    margin: 0;
+    color: var(--text);
+}
+
+.navbar {
+    background: var(--bg);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.brand-icon {
+    width: 22px;
+    height: 22px;
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-user {
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.nav-cta {
+    background: var(--accent);
+    color: white !important;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+}
+
+.nav-cta:hover {
+    background: var(--accent-dark);
+}
+
+.container {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.auth-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-card h1 {
+    margin: 0 0 0.2rem;
+    font-size: 1.5rem;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin: 0 0 1.2rem;
+    font-size: 0.9rem;
+}
+
+.auth-card label {
+    margin-top: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.auth-card input {
+    padding: 0.65rem 0.7rem;
+    margin-top: 0.35rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.auth-card input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.auth-switch {
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-align: center;
+}
+
+.auth-switch a {
+    color: var(--accent-dark);
+}
+
+.primary-btn {
+    margin-top: 1.4rem;
+    padding: 0.65rem 1.1rem;
+    border: none;
+    border-radius: 6px;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.primary-btn:hover {
+    background: var(--accent-dark);
+}
+
+.secondary-btn {
+    margin-top: 0.35rem;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    background: white;
+    color: var(--accent-dark);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.secondary-btn:hover {
+    background: #f0f9ff;
+}
+
+.danger-btn {
+    padding: 0.4rem 0.7rem;
+    border: 1px solid var(--danger);
+    border-radius: 6px;
+    background: white;
+    color: var(--danger);
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.danger-btn:hover {
+    background: #fef2f2;
+}
+
+.icon-btn {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg-light);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-left: 0.4rem;
+}
+
+.icon-btn:hover {
+    background: #e2e8f0;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.table-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.vault-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vault-table th {
+    text-align: left;
+    padding: 0.8rem 1.2rem;
+    background: var(--bg-light);
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.vault-table td {
+    text-align: left;
+    padding: 0.8rem 1.2rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.95rem;
+}
+
+.password-cell {
+    display: flex;
+    align-items: center;
+}
+
+.password-value {
+    font-family: 'Consolas', 'Menlo', monospace;
+    background: var(--bg-light);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.88rem;
+}
+
+.password-row {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.35rem;
+}
+
+.password-row input {
+    flex: 1;
+}
+
+.monospace {
+    font-family: 'Consolas', 'Menlo', monospace;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--muted);
+}
+
+.empty-state .primary-btn {
+    margin-top: 1rem;
+}
+
+.flashes {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.2rem;
+}
+
+.flashes li {
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
