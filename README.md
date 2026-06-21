@@ -6,6 +6,7 @@ through a Flask web interface.
 
 
 | **Course**       | B207A Cyber Security      |
+| -------------    | -------------  | -------- |
 | **Name**         | Ozgur Onen                | 
 | **Student ID**   | GH1044899                 |
 
