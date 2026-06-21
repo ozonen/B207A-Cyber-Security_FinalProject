@@ -4,11 +4,12 @@ A password manager built with Python that stores encrypted credentials in a MySQ
 provides registration, login, password generation, and credential management
 through a Flask web interface.
 
-
-**Course:** B207 Cyber Security
-**Topic:** Secure Password Manager with Encryption and Web Interface
-**Name:** Ozgur Onen
-**Student number:** GH1044899
+| | |
+|---|---|
+|**Course:**| B207 Cyber Security|
+|**Topic:**| Secure Password Manager with Encryption and Web Interface|
+|**Name:**| Ozgur Onen|
+|**Student number:**| GH1044899|
 
 ## Project Structure
 
