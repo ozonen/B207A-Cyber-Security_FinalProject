@@ -5,7 +5,7 @@ provides registration, login, password generation, and credential management
 through a Flask web interface.
 
 | | |
-|---|---|
+
 | **Course** | B207 Cyber Security |
 | **Topic** | Secure Password Manager with Encryption and Web Interface |
 | **Name** | Ozgur Onen |
