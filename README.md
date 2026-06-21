@@ -44,6 +44,7 @@ python setup_environment.py
 This installs the Python dependencies, creates the database and tables,
 creates a dedicated MySQL application user, and writes a `.env` file.
 
+
 ## Usage
 
 ```bash
