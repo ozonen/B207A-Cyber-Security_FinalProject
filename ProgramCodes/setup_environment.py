@@ -108,7 +108,7 @@ def main() -> None:
     print(f" - Database '{APP_DB_NAME}' and its tables are ready.")
     print(f" - Application MySQL user '{APP_DB_USER}' created with a generated password.")
     print(f" - Connection settings written to {ENV_PATH} (not committed to git).")
-    print("\nYou can now run: python cli_test.py")
+    print("\nYou can now run: python -m tests.manual_cli")
 
 
 if __name__ == "__main__":
